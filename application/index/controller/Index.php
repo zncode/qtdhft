@@ -8,7 +8,7 @@ class Index
     public function index()
     {
     	$wangye 	= new WangyeModel();
-    	$wangye 	= $wangye->getContent('网页', '新闻');
+    	$wangye 	= $wangye->getContent('新闻');
 
     	return view('index/index', ['wangye'=>$wangye]);
     }
