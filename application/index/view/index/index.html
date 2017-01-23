@@ -11,8 +11,6 @@
 		<div class="row">
 			<div class="col-xs-12">
 				<h1>:)</h1>
-				<p> ThinkPHP V5<br/><span style="font-size:30px">十年磨一剑 - 为API开发设计的高性能框架</span></p>
-				<span style="font-size:22px;">[ V5.0 版本由 <a href="http://www.qiniu.com" target="qiniu">七牛云</a> 独家赞助发布 ]</span>
 				<div class="row">
 					<div class="col-xs-3">111</div>
 					<div class="col-xs-3">222</div>
@@ -41,6 +39,9 @@
 					<div class="clearfix"></div>
 					</tr>
 				</div>
+				{volist name="wangye" id="data"}
+					{$data.aid}:{$data.title}<br/>
+				{/volist}
 			</div>
 		</div>
 	</div>

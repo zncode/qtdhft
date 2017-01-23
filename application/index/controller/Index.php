@@ -1,10 +1,15 @@
 <?php
 namespace app\index\controller;
 
+use app\index\model\WangyeModel;
+
 class Index
 {
     public function index()
     {
-    	return view('index/index');
+    	$wangye 	= new WangyeModel();
+    	$wangye 	= $wangye->getContent('网页', '新闻');
+
+    	return view('index/index', ['wangye'=>$wangye]);
     }
 }
