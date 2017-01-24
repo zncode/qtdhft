@@ -9,6 +9,10 @@
 // | Author: liu21st <liu21st@gmail.com>
 // +----------------------------------------------------------------------
 
+use think\Route;
+
+Route::get('update_content', 'index/index/updateContent');
+
 return [
     '__pattern__' => [
         'name' => '\w+',
