@@ -12,29 +12,29 @@ class ArcTypeModel extends Model
 
     function getTypeId($channel, $top, $first=NULL){
 
-    	$channelObject = new ChannelTypeModel();
-    	$channelId = $channelObject->getChannelId($channel);
+        $channelObject = new ChannelTypeModel();
+        $channelId = $channelObject->getChannelId($channel);
 
-    	if($channelId){
-	    	$topObject = $this->where('channeltype', $channelId)->where('typename', $top)->find();
-	    	if($topObject){
-	    		$topId = $topObject->id;
-	    		if($first){
-		    		$firstObject = $this->where('typename', $first)->where('topid', $topId)->find();
-		    		if($firstObject){
-		    			return $firstObject->id;
-		    		}else{
-		    			return false;
-		    		}	    			
-	    		}else{
-	    			return $topId;
-	    		}
+        if($channelId){
+            $topObject = $this->where('channeltype', $channelId)->where('typename', $top)->find();
+            if($topObject){
+                $topId = $topObject->id;
+                if($first){
+                    $firstObject = $this->where('typename', $first)->where('topid', $topId)->find();
+                    if($firstObject){
+                        return $firstObject->id;
+                    }else{
+                        return false;
+                    }	    			
+                }else{
+                    return $topId;
+                }
 
-	    	}else{
-	    		return false;
-	    	}
-    	}else{
-    		return false;
-    	}
+            }else{
+                return false;
+            }
+        }else{
+            return false;
+        }
     }
 }
