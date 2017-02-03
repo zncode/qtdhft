@@ -1,0 +1,11 @@
+div.container {padding:0;}
+
+div.panel-heading {padding:5px 15px;}
+.fengexian {
+    height: 20px;
+    background: url(../images/bg.png) 100% 0 no-repeat;
+    margin: 0 ;
+}
+
+.index-ad {margin: 10px 0;}
+.index-right-box {text-align: center;margin: 20px 0; width: 100%;}

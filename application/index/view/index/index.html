@@ -2,8 +2,8 @@
 <html lang="zh-CN">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
         {load href="static/css/bootstrap.min.css" /}
+        {load href="static/css/style.css" /}
     <title>蜻蜓导航 | 找到想去的地方 </title>
     <link rel="shortcut icon" href="/favicon.ico" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -19,18 +19,192 @@
             </div>
         </div>
         <div class="container">
-            {volist name="wangye" id="vo" key="k"}
-           <div class="row">
-                <div class="col-xs-12">
-                    <h4>{$key}</h4> 
-                    <ul class="list-unstyled list-inline">
-                    {volist name="vo" id="news"}
-                       <li> <a href="{$news.url}" target="_blank">{$news.title}</a></li>
+
+            <!-- 1 新闻阅读 开始 -->
+            <div class="row">
+
+                <!-- 左侧开始 -->
+                <div class="col-xs-10">
+                   {volist name="one" id="values" key="k"}
+                   <div class="row">
+                        <div class="col-xs-12">
+                            <h4>{$key}</h4> 
+                            <ul class="list-unstyled list-inline">
+                            {volist name="values" id="value"}
+                               <li> <a href="{$value.url}" target="_blank">{$value.title}</a></li>
+                            {/volist}
+                            </ul>
+                        </div>
+                    </div> 
                     {/volist}
-                    </ul>
+                    <div class="row fengexian"></div>
+                 </div> 
+                <!-- 左侧结束 -->
+
+                <!-- 右侧开始 -->
+                <div class="col-xs-2">
+                    <div class="row index-right-box">
+                        <a href="http://www.baidu.com" target="_blank"><img src="static/images/baidu.png" width="180px" height="80px"></a>
+                    </div> 
+                    <div class="row index-right-box">
+                        <a href="http://www.tmall.com" target="_blank"><img src="static/images/tmall.png" width="200px" height="90px"></a>
+                    </div>    
+                    <div class="row index-right-box" >
+                        <br>
+                        <a href="https://wx.qq.com" target="_blank"><img src="static/images/weixin.png" width="100px" height="90px"></a>
+                    </div>   
+                </div> 
+                <!-- 右侧结束 -->
+
+            </div>
+            <!-- 新闻阅读 结束 -->
+
+
+
+            <!-- 2 影音 开始 -->
+            <div class="row">
+
+                <!-- 左侧开始 -->
+                <div class="col-xs-10">
+                   {volist name="two" id="values" key="k"}
+                   <div class="row">
+                        <div class="col-xs-12">
+                            <h4>{$key}</h4> 
+                            <ul class="list-unstyled list-inline">
+                            {volist name="values" id="value"}
+                               <li> <a href="{$value.url}" target="_blank">{$value.title}</a></li>
+                            {/volist}
+                            </ul>
+                        </div>
+                    </div> 
+                    {/volist}
+                    <div class="row fengexian"></div>
+                 </div> 
+                <!-- 左侧结束 -->
+
+                <!-- 右侧开始 -->
+                <div class="col-xs-2">
+                    <div class="row index-right-box">
+                        <a href="http://www.jd.com" target="_blank"><img src="static/images/jd.jpg" width="180px" height="90px"></a>
+                    </div> 
+                    <div class="row index-right-box">
+                        <a href="http://www.youku.com" target="_blank"><img src="static/images/youku.png" width="130px" height="80px"></a>
+                    </div> 
+                     <div class="row index-right-box">
+                        <a href="http://news.sina.com.cn" target="_blank"><img src="static/images/sina_news.png" width="120px" height="40px"></a>
+                    </div> 
+                </div> 
+                <!-- 右侧结束 -->
+
+            </div>
+            <!-- 影音 结束 -->
+
+            <!-- ad start -->
+            <div class="row">
+                <div class="col-xs-12 index-ad ">
+                    <a href="http://acts.qidian.com/2016/5727431/index.html" target="_blank"><img src="http://qidian.qpic.cn/qidian_common/349573/f4a1ac7a1a80b2f76cf797fc69acd87a/0"></a>
                 </div>
-            </div> 
-            {/volist}
+
+            </div>
+            <!-- ad end -->
+
+            <!-- 3 游戏 开始 -->
+            <div class="row">
+
+                <!-- 左侧开始 -->
+                <div class="col-xs-10">
+                   {volist name="three" id="values" key="k"}
+                   <div class="row">
+                        <div class="col-xs-12">
+                            <h4>{$key}</h4> 
+                            <ul class="list-unstyled list-inline">
+                            {volist name="values" id="value"}
+                               <li> <a href="{$value.url}" target="_blank">{$value.title}</a></li>
+                            {/volist}
+                            </ul>
+                        </div>
+                    </div> 
+                    {/volist}
+                    <div class="row fengexian"></div>
+                 </div> 
+                <!-- 左侧结束 -->
+
+                <!-- 右侧开始 -->
+                <div class="col-xs-2">
+                    <div class="row index-right-box">
+                        <br>
+                        <a href="http://mail.163.com/" target="_blank"><img src="static/images/163logo.gif" width="130px" height="30px"></a>
+                    </div> 
+                    <div class="row index-right-box">
+                        <br>
+                        <br>
+                        <a href="http://fanyi.youdao.com/" target="_blank"><img src="static/images/youdaofanyi.png" width="130px" height="30px"></a>
+                    </div> 
+                </div> 
+                <!-- 右侧结束 -->
+
+            </div>
+            <!-- 游戏 结束 -->
+
+            <!-- 4 生活 开始 -->
+            <div class="row">
+
+                <!-- 左侧开始 -->
+                <div class="col-xs-10">
+                   {volist name="four" id="values" key="k"}
+                   <div class="row">
+                        <div class="col-xs-12">
+                            <h4>{$key}</h4> 
+                            <ul class="list-unstyled list-inline">
+                            {volist name="values" id="value"}
+                               <li> <a href="{$value.url}" target="_blank">{$value.title}</a></li>
+                            {/volist}
+                            </ul>
+                        </div>
+                    </div> 
+                    {/volist}
+                     <div class="row fengexian"></div>
+                 </div> 
+                <!-- 左侧结束 -->
+
+                <!-- 右侧开始 -->
+                <div class="col-xs-2">
+
+                </div> 
+                <!-- 右侧结束 -->
+
+            </div>
+            <!-- 游戏 结束 -->
+
+            <!-- 5 其它 开始 -->
+            <div class="row">
+
+                <!-- 左侧开始 -->
+                <div class="col-xs-10">
+                   {volist name="five" id="values" key="k"}
+                   <div class="row">
+                        <div class="col-xs-12">
+                            <h4>{$key}</h4> 
+                            <ul class="list-unstyled list-inline">
+                            {volist name="values" id="value"}
+                               <li> <a href="{$value.url}" target="_blank">{$value.title}</a></li>
+                            {/volist}
+                            </ul>
+                        </div>
+                    </div> 
+                    {/volist}
+                 </div> 
+                <!-- 左侧结束 -->
+
+                <!-- 右侧开始 -->
+                <div class="col-xs-2">
+
+                </div> 
+                <!-- 右侧结束 -->
+
+            </div>
+            <!-- 游戏 结束 -->
+
         </div>
          <div class="container">
             <div class="page-footer">

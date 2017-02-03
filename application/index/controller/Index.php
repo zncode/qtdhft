@@ -15,6 +15,43 @@ class Index
         {
             $params['wangye'][$type->typename] = $wangye->getContent($type->typename);
         }
+
+        $part_1['新闻'] = $wangye->getContent('新闻');
+        $part_1['新媒体'] = $wangye->getContent('新媒体');
+        $part_1['阅读'] = $wangye->getContent('阅读');
+        $part_1['博客'] = $wangye->getContent('博客');
+        $part_1['小说'] = $wangye->getContent('小说');
+
+        $part_2['直播'] = $wangye->getContent('直播');
+        $part_2['视频'] = $wangye->getContent('视频');
+        $part_2['VR'] 	= $wangye->getContent('VR');
+        $part_2['音乐'] = $wangye->getContent('音乐');
+
+        $part_3['游戏'] = $wangye->getContent('游戏');
+        $part_3['手游'] = $wangye->getContent('手游');
+        $part_3['页游'] = $wangye->getContent('页游');
+
+
+        $part_4['旅游'] = $wangye->getContent('旅游');
+        $part_4['购物'] = $wangye->getContent('购物');
+        $part_4['生活'] = $wangye->getContent('生活');
+        $part_4['社区'] = $wangye->getContent('社区');
+        $part_4['招聘'] = $wangye->getContent('招聘');
+
+        $part_5['科技'] = $wangye->getContent('科技');
+        $part_5['财经'] = $wangye->getContent('财经');
+        $part_5['体育'] = $wangye->getContent('体育');
+        $part_5['军事'] = $wangye->getContent('军事');
+        $part_5['图片'] = $wangye->getContent('图片');
+        $part_5['报刊'] = $wangye->getContent('报刊');
+
+
+        $params['one'] 		=  $part_1;
+        $params['two'] 		=  $part_2;
+        $params['three'] 	=  $part_3;
+        $params['four'] 	=  $part_4;
+        $params['five'] 	=  $part_5;
+
         return view('index/index', $params);
     }
 
