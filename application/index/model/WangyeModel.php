@@ -41,4 +41,19 @@ class WangyeModel extends Model
             return false;
         }
     }
+
+    public function getCategoryContent($first, $second){
+        $arcType      = new ArcTypeModel();
+        $secondId     = $arcType->getTypeId($this->channel, $first, $second);
+        if($secondId){
+            $content = $this->where('typeid', $secondId)->select();
+            if($content){
+                return $content;
+            }else{
+                return false;
+            }
+        }else{
+            return false;
+        }
+    }
 }

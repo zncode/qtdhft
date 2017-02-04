@@ -1,0 +1,42 @@
+<div class="container">
+
+    <!-- 1 新闻阅读 开始 -->
+    <div class="row">
+
+        <!-- 左侧开始 -->
+        <div class="col-xs-10">
+           {volist name="one" id="values" key="k"}
+           <div class="row">
+                <div class="col-xs-12">
+                    <h4>{$key}</h4> 
+                    <ul class="list-unstyled list-inline">
+                    {volist name="values" id="value"}
+                       <li> <a href="{$value.url}" target="_blank">{$value.title}</a></li>
+                    {/volist}
+                    </ul>
+                </div>
+            </div> 
+            {/volist}
+         </div> 
+        <!-- 左侧结束 -->
+
+        <!-- 右侧开始 -->
+        <div class="col-xs-2">
+            <div class="row index-right-box">
+                <a href="http://www.baidu.com" target="_blank"><img src="static/images/baidu.png" width="180px" height="80px"></a>
+            </div> 
+            <div class="row index-right-box">
+                <a href="http://www.tmall.com" target="_blank"><img src="static/images/tmall.png" width="200px" height="90px"></a>
+            </div>    
+            <div class="row index-right-box" >
+                <br>
+                <a href="https://wx.qq.com" target="_blank"><img src="static/images/weixin.png" width="100px" height="90px"></a>
+            </div>   
+        </div> 
+        <!-- 右侧结束 -->
+
+    </div>
+    <!-- 新闻阅读 结束 -->
+
+</div>
+

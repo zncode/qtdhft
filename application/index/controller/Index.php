@@ -1,15 +1,19 @@
 <?php
 namespace app\index\controller;
 
+use app\index\controller\Base;
+
 use app\index\model\WangyeModel;
 use app\index\model\ArcTypeModel;
+use app\index\model\SysConfigModel;
 
-class Index
+class Index extends Base
 {
     public function index()
     {
         $arcType = new ArcTypeModel();
         $wangye = new WangyeModel();
+        $sysConfig = new SysConfigModel();
         $types = $arcType->where('channeltype','-17')->where('topid',0)->select();
         foreach($types as $type)
         {
@@ -54,6 +58,10 @@ class Index
         $params['three'] 	=  $part_3;
         $params['four'] 	=  $part_4;
         $params['five'] 	=  $part_5;
+
+        // $params['site_title']       = $sysConfig->getSiteName();
+        // $params['site_keyword']     = $sysConfig->getSiteKeyword();
+        // $params['site_description'] = $sysConfig->getSiteDescription();
 
         return view('index/index', $params);
     }

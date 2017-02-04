@@ -12,6 +12,7 @@
 use think\Route;
 
 Route::get('update_content', 'index/index/updateContent');
+Route::get('news', 'index/news/index');
 
 return [
     '__pattern__' => [
