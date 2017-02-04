@@ -16,8 +16,11 @@ class Index
             $params['wangye'][$type->typename] = $wangye->getContent($type->typename);
         }
 
-        $part_1['新闻'] = $wangye->getContent('新闻');
-        $part_1['新媒体'] = $wangye->getContent('新媒体');
+        $news_part_1 = $wangye->getIndexContent('新闻', '综合');
+        $news_part_2 = $wangye->getIndexContent('新闻', '官方');
+        $news_part 	 = array_merge($news_part_1, $news_part_2);
+        $part_1['新闻'] 	= $news_part;
+        $part_1['新媒体'] 	= $wangye->getContent('新媒体');
         $part_1['阅读'] = $wangye->getContent('阅读');
         $part_1['博客'] = $wangye->getContent('博客');
         $part_1['小说'] = $wangye->getContent('小说');
