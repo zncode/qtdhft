@@ -46,7 +46,7 @@ class Index
         $part_5['体育'] = $wangye->getContent('体育');
         $part_5['军事'] = $wangye->getContent('军事');
         $part_5['图片'] = $wangye->getContent('图片');
-        $part_5['报刊'] = $wangye->getContent('报刊');
+        //$part_5['报刊'] = $wangye->getContent('报刊');
 
 
         $params['one'] 		=  $part_1;
