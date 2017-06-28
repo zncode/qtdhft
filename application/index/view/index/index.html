@@ -5,25 +5,32 @@
     <div class="row">
 
         <!-- 左侧开始 -->
-        <div class="col-xs-10">
+        <div class="col-xs-12">
            {volist name="one" id="values" key="k"}
            <div class="row">
                 <div class="col-xs-12">
-                    <h4>{$key}</h4> 
-                    <ul class="list-unstyled list-inline">
+                    <h4 style="border-bottom: 1px solid #ebebeb; padding:10px 0 10px 0;">{$key}</h4> 
+                 
                     {volist name="values" id="value"}
-                       <li> <a href="{$value.url}" target="_blank">{$value.title}</a></li>
+                        <div class="index_box">
+                            
+                            <div>
+                                <a href="{$value.url}" target="_blank">{$value.title}</a>
+                                <br>
+                                <span>权威信誉信息认证平台</span>
+                            </div>
+                        </div>
                     {/volist}
-                    </ul>
+                    
                 </div>
             </div> 
             {/volist}
-            <div class="row fengexian"></div>
+           <!-- <div class="row fengexian"></div> -->
          </div> 
         <!-- 左侧结束 -->
 
         <!-- 右侧开始 -->
-        <div class="col-xs-2">
+  <!--      <div class="col-xs-2">
             <div class="row index-right-box">
                 <a href="http://www.baidu.com" target="_blank"><img src="static/images/baidu.png" width="180px" height="80px"></a>
             </div> 
@@ -34,7 +41,7 @@
                 <br>
                 <a href="https://wx.qq.com" target="_blank"><img src="static/images/weixin.png" width="100px" height="90px"></a>
             </div>   
-        </div> 
+        </div> -->
         <!-- 右侧结束 -->
 
     </div>
@@ -46,25 +53,32 @@
     <div class="row">
 
         <!-- 左侧开始 -->
-        <div class="col-xs-10">
+        <div class="col-xs-12">
            {volist name="two" id="values" key="k"}
            <div class="row">
                 <div class="col-xs-12">
-                    <h4>{$key}</h4> 
-                    <ul class="list-unstyled list-inline">
+                    <h4 style="border-bottom: 1px solid #ebebeb; padding:10px 0 10px 0;">{$key}</h4> 
+                 
                     {volist name="values" id="value"}
-                       <li> <a href="{$value.url}" target="_blank">{$value.title}</a></li>
+                        <div class="index_box">
+
+                            <div>
+                                <a href="{$value.url}" target="_blank">{$value.title}</a>
+                                <br>
+                                <span>权威信誉信息认证平台</span>
+                            </div>
+                        </div>
                     {/volist}
-                    </ul>
+                    
                 </div>
             </div> 
             {/volist}
-            <div class="row fengexian"></div>
+          <!--  <div class="row fengexian"></div> -->
          </div> 
         <!-- 左侧结束 -->
 
         <!-- 右侧开始 -->
-        <div class="col-xs-2">
+      <!--  <div class="col-xs-2">
             <div class="row index-right-box">
                 <a href="http://www.jd.com" target="_blank"><img src="static/images/jd.jpg" width="180px" height="90px"></a>
             </div> 
@@ -74,7 +88,7 @@
              <div class="row index-right-box">
                 <a href="http://news.sina.com.cn" target="_blank"><img src="static/images/sina_news.png" width="120px" height="40px"></a>
             </div> 
-        </div> 
+        </div> -->
         <!-- 右侧结束 -->
 
     </div>
