@@ -9,9 +9,11 @@ div.panel-heading {padding:5px 15px;}
 
 .index-ad {margin: 10px 0;}
 .index-right-box {text-align: center;margin: 20px 0; width: 100%;}
-.header-menu a{color: black; font-size: 12px;}
-.header-menu a:hover{color: #e66100; font-size: 12px;}
-
+.header-menu a{color: black; font-size: 13px;}
+.header-menu a:hover{color: #e66100; font-size: 13px;}
+.page-footer{
+    margin-top: 20px;
+}
 .index_box {
 	float: left;
     width: 214px;
@@ -19,7 +21,7 @@ div.panel-heading {padding:5px 15px;}
     _overflow: hidden;
     _height: 66px;
     padding: 15px 0 16px 10px;
-    height: 70px;
+    height: 90px;
     border-bottom: 1px solid #f3f3f3;
 }
 
@@ -38,4 +40,16 @@ div.panel-heading {padding:5px 15px;}
     font-family: arial,"Sim Sun";
     font-size: 12px;
     color: #666;
+}
+.header-menu {
+    margin-top: 30px;
+}
+.header-menu ul{
+
+}
+.header-menu li{
+    float: left;
+    width: 40px;
+    list-style: none;
+    text-align: left;
 }

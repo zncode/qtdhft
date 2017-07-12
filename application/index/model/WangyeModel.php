@@ -3,10 +3,10 @@
 namespace app\index\model;
 
 use think\Model;
-
+use app\index\model\BaseModel;
 use app\index\model\ArcTypeModel;
 
-class WangyeModel extends Model
+class WangyeModel extends BaseModel
 {
     protected $pk = 'aid';
     protected $table = 'dede_wangye';
@@ -17,7 +17,11 @@ class WangyeModel extends Model
         $typeId 	= $arcType->getTypeId($this->channel, $top);
         if($typeId){
             $content = $this->where('typeid', $typeId)->select();
+
             if($content){
+
+     
+
                 return $content;
             }else{
                 return false;
@@ -33,6 +37,14 @@ class WangyeModel extends Model
         if($secondId){
             $content = $this->where('typeid', $secondId)->where('flag', 'c')->select();
             if($content){
+                foreach($content as $key => $value){
+                    if($value['favicon']){
+                        $content[$key]['favicon'] = $this->getImageUrl($value['favicon']);
+                    }
+                    if($value['logo']){
+                        $content[$key]['logo'] = $this->getImageUrl($value['logo']);
+                    }
+                }    
                 return $content;
             }else{
                 return false;
