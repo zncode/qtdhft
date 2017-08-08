@@ -19,9 +19,6 @@ class WangyeModel extends BaseModel
             $content = $this->where('typeid', $typeId)->select();
 
             if($content){
-
-     
-
                 return $content;
             }else{
                 return false;
